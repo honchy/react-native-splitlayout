@@ -1,0 +1,19 @@
+{
+  "name": "react-native-splitlayout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honchy/react-native-splitlayout.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/honchy/react-native-splitlayout/issues"
+  },
+  "homepage": "https://github.com/honchy/react-native-splitlayout#readme"
+}
