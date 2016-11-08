@@ -10,6 +10,8 @@ export default class SplitLayout extends Component {
     render() {
 
         let { style=[], width, height, flex, split, ...others } = this.props
+        // to array
+        style = [].concat(style)
 
         let widthNum = parseFloat(width, 10)
         let props = [width, height]
