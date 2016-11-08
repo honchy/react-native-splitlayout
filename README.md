@@ -2,6 +2,10 @@
 
 This Component named SplitLayout. It'll designed to split a box into several pieces.
 
+### install 
+
+        npm install splitlayout --save
+
 ### example
 
 
@@ -16,7 +20,7 @@ This Component named SplitLayout. It'll designed to split a box into several pie
                         <SplitLayout height={ 44 }>
                             <Text>Top Tittle</Text>
                         </SplitLayout>
-                        <SplitLayout flex={2} split="|">
+                        <SplitLayout flex={ 1 } split="|">
                             <SplitLayout flex={ 3 }>
                                 <Text>Info Part One</Text>
                             </SplitLayout>
