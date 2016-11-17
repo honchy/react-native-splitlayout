@@ -1,6 +1,6 @@
 ### usage
 
-This Component named SplitLayout. It'll designed to split a box into several pieces.
+It's a react-native Component that split a box into several pieces. It's a quick way to layout.
 
 ### install 
 
@@ -8,26 +8,33 @@ This Component named SplitLayout. It'll designed to split a box into several pie
 
 ### example
 
-
         import SplitLayout from 'splitlayout'
         import React, { Component } from 'react'
         import { StyleSheet, Text } from 'react-native'
     
-        export class Demo1 extends Component {
+        export default class Demo1 extends Component {
             render() {
                 return (
-                    <SplitLayout split="-">
-                        <SplitLayout height={ 44 }>
+                    <SplitLayout split="-" style={ styles.box }>{/* flexDirection column */}
+                        
+                        {/* fixedHight tittle */}
+                        <SplitLayout height={ 44 } style={ styles.title }>
                             <Text>Top Tittle</Text>
                         </SplitLayout>
-                        <SplitLayout flex={ 1 } split="|">
-                            <SplitLayout flex={ 3 }>
+    
+                        {/* flex body */}
+                        <SplitLayout flex={ 1 } split="|" style={ styles.body }>
+                            
+                            {/* width rate */}
+                            <SplitLayout flex={ 3 } style={ styles.part1 }>
                                 <Text>Info Part One</Text>
                             </SplitLayout>
-                            <SplitLayout flex={ 2 }>
+                            <SplitLayout flex={ 2 } style={ styles.part2 }>
                                 <Text>Info Part Two</Text>
                             </SplitLayout>
-                            <SplitLayout width={ '33.33vw' }>
+    
+                            {/* percentage width */}
+                            <SplitLayout width={ '33.33vw' } style={ styles.action }>
                                 <Text>Perhaps One Button</Text>
                             </SplitLayout>
                         </SplitLayout>
@@ -35,12 +42,23 @@ This Component named SplitLayout. It'll designed to split a box into several pie
                 )
             }
         }
-
+    
         const styles = StyleSheet.create({
-            bg1: {
-                backgroundColor: '#ff0'
+            box: {
+                borderWidth: 1,
+                height: 200
             },
-            bg2: {
-                backgroundColor: '#f0f'
+            title:  {
+                justifyContent: 'center'
+            },
+            body: {
+                backgroundColor: '#ccc'
+            },
+            part1: {
+                borderRightWidth: 1
+            },
+            action: {
+                borderLeftWidth: 1  
             }
         })
+
